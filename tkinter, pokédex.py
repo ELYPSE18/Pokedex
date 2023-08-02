@@ -7,15 +7,16 @@ fenetre.geometry("1000x800")
 fenetre.title("Pokédex")
 
 class DB:
-    def __init__(self, nom, type, capacités):
+    def __init__(self, nom, type, capacités, image):
             self.nom = nom
             self.type = type
             self.capacités = capacités
+            self.image = image
             
 
-sangoku = DB("san goku", "saiyan", "téléportation")
-sangohan = DB("san gohan", "saiyan", "malin comme un singe")
-krilin = DB("krilin", "humain", "a un cyborg comme femme")
+sangoku = DB("san goku", "saiyan", "téléportation", "sangoku.png" )
+sangohan = DB("san gohan", "saiyan", "malin comme un singe", "sangohan.png" )
+krilin = DB("krilin", "humain", "a un cyborg comme femme", "krilin.png" )
 
 persos = [sangoku, sangohan, krilin]
 
@@ -24,7 +25,7 @@ def affiche_detail():
     nom_label.config(text=f"nom {persos[indexDuPerso].nom}")
     type_label.config(text=f"type {persos[indexDuPerso].type}")
     capacités_label.config(text=f"capacités {persos[indexDuPerso].capacités}")
-    
+    image_label.config(image=persos[indexDuPerso].image)
    
 def ajouter_combattant():
      nom = nom_input_label.get()
@@ -39,11 +40,18 @@ def ajouter_combattant():
      messagebox.showinfo("Ajout réussi", "Combattant ajouté")
 
  #création d'un logo sur fenetre tkinter
-image = Image.open("Dragon-Ball-Logo.png")
+
+logo = Image.open("Dragon-Ball-Logo.png")
+logo = logo.resize((100, 100))
+logo = ImageTk.PhotoImage(logo)
+label = tk.Label(fenetre, image=logo)
+label.place(x=10, y=10)
+
+image = Image.open("img/ball.png")
 image = image.resize((100, 100))
 image = ImageTk.PhotoImage(image)
-label = tk.Label(fenetre, image=image)
-label.place(x=10, y=10)
+image_label = tk.Label(fenetre, image=image)
+
 
 nom_label = tk.Label(fenetre, text=" ")
 type_label = tk.Label(fenetre, text=" ")
@@ -51,6 +59,7 @@ capacités_label = tk.Label(fenetre, text=" ")
 nom_label.place(x=300, y=500)
 type_label.place(x=300, y=520)
 capacités_label.place(x=300, y=540)
+image_label.place(x=300, y=250)
 
  #creation d'une liste déroulante
 listbox = tk.Listbox(fenetre)
