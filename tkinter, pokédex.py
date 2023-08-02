@@ -20,19 +20,15 @@ sangohan = DB("san gohan", "saiyan", "malin comme un singe")
 krilin = DB("krilin", "humain", "a un cyborg comme femme")
 
 persos = [sangoku, sangohan, krilin]
-    
-
-         
 
 
-# def change_label_text(text):
-#     label.config(text=text)
-
-def affiche_detail(indexDuPerso):
-     nom_label.config(text="nom" + persos[indexDuPerso].nom)
-     type_label.config(text="type" + DB.type)
-     capacités_label.config(text="capacités"+ DB.capacités)
-   
+def affiche_detail():
+    indexDuPerso = int(listbox.curselection()[0])
+    nom_label.config(text=f"nom {persos[indexDuPerso].nom}")
+    #  type_label = tk.Label(fenetre, text="type " + persos[indexDuPerso].type)
+    #  capacités_label = tk.Label(fenetre, text="capacités " + persos[indexDuPerso].capacités)
+      
+      
 
  #création d'un logo sur fenetre tkinter
 image = Image.open("Dragon-Ball-Logo.png")
@@ -41,7 +37,12 @@ image = ImageTk.PhotoImage(image)
 label = tk.Label(fenetre, image=image)
 label.place(x=10, y=10)
 
-
+nom_label = tk.Label(fenetre, text="dd ")
+type_label = tk.Label(fenetre, text=" d")
+capacités_label = tk.Label(fenetre, text=" d")
+nom_label.place(x=20, y=30)
+# type_label.pack()
+# capacités_label.pack()
 
  #creation d'une liste déroulante
 listbox = tk.Listbox(fenetre)
@@ -57,6 +58,7 @@ listbox.insert(tk.END, "krilin")
 #création d'un bouton por récupurer la valeur saisie
 button = tk.Button(fenetre, text="Afficher les détails", command=affiche_detail)
 button.place(x=810, y=464)
+
 
 DB_frame = tk.Frame(fenetre)
 DB_frame.place()
