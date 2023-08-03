@@ -14,9 +14,9 @@ class DB:
             self.image = image
             
 
-sangoku = DB("san goku", "saiyan", "téléportation", "sangoku.png" )
-sangohan = DB("san gohan", "saiyan", "malin comme un singe", "sangohan.png" )
-krilin = DB("krilin", "humain", "a un cyborg comme femme", "krilin.png" )
+sangoku = DB("san goku", "saiyan", "téléportation", "img/sangoku.png" )
+sangohan = DB("san gohan", "saiyan", "malin comme un singe", "img/sangohan.png" )
+krilin = DB("krilin", "humain", "a un cyborg comme femme", "img/krilin.png" )
 
 persos = [sangoku, sangohan, krilin]
 
@@ -25,7 +25,11 @@ def affiche_detail():
     nom_label.config(text=f"nom {persos[indexDuPerso].nom}")
     type_label.config(text=f"type {persos[indexDuPerso].type}")
     capacités_label.config(text=f"capacités {persos[indexDuPerso].capacités}")
-    image_label.config(image=persos[indexDuPerso].image)
+    img = Image.open(persos[indexDuPerso].image)
+    img = img.resize((100,100))
+    photo = ImageTk.PhotoImage(img)
+    image_label.config(image=photo)
+    image_label.image = photo
    
 def ajouter_combattant():
      nom = nom_input_label.get()
