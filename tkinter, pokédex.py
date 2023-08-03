@@ -35,7 +35,8 @@ def ajouter_combattant():
      nom = nom_input_label.get()
      type = type_input_label.get()
      capacités = capacités_input_label.get()
-     persos.append(DB(nom, type, capacités, image ))
+     image_combattant = "img/"+nom+".png"
+     persos.append(DB(nom, type, capacités, image_combattant ))
      listbox.insert(tk.END, nom)
      nom_input_label.delete(0, tk.END)
      type_input_label.delete(0, tk.END)
@@ -59,8 +60,29 @@ logo = ImageTk.PhotoImage(logo)
 label = tk.Label(fenetre, image=logo, bg="DarkOrange2")
 label.place(x=10, y=10)
 
-image = Image.open("img/ball.png")
-image = image.resize((200, 200))
+#création d'un logo sur fenetre tkinter
+logo2 = Image.open("img/nuage.png")
+logo2 = logo2.resize((150, 100))
+logo2 = ImageTk.PhotoImage(logo2)
+label = tk.Label(fenetre, image=logo2, bg="DarkOrange2")
+label.place(x=750, y=0)
+
+#création d'un logo sur fenetre tkinter
+logo3 = Image.open("img/nuage.png")
+logo3 = logo3.resize((150, 100))
+logo3 = ImageTk.PhotoImage(logo3)
+label = tk.Label(fenetre, image=logo3, bg="DarkOrange2")
+label.place(x=500, y=0)
+
+#création d'un logo sur fenetre tkinter
+logo4 = Image.open("img/nuage.png")
+logo4 = logo4.resize((150, 100))
+logo4 = ImageTk.PhotoImage(logo4)
+label = tk.Label(fenetre, image=logo4, bg="DarkOrange2")
+label.place(x=250, y=0)
+
+image = Image.open("img/central.png")
+image = image.resize((300, 400))
 image = ImageTk.PhotoImage(image)
 image_label = tk.Label(fenetre, image=image, bg="DarkOrange2")
 
@@ -86,9 +108,6 @@ listbox.insert(tk.END, "Piccolo")
 listbox.bind("<Enter>", lambda e: listbox.config(bg="yellow"))
 listbox.bind("<Leave>", lambda e: listbox.config(bg="DarkOrange2"))
 
- #enelever le surlignement de la liste déroulante
-listbox.bind("<ButtonRelease-1>", lambda e: listbox.selection_clear(0, tk.END))
-
  #création d'un bouton por récupurer la valeur saisie
 button = tk.Button(fenetre, text="Afficher les détails", command=affiche_detail, bg="yellow", font="font")
 button.place(x=770, y=367)
@@ -107,17 +126,17 @@ button.place(x=739, y=700)
 
 nom_input_label = tk.Label(nouveau_combattant, text="Nom du combattant", bg="DarkOrange2", font="font")
 nom_input_label.grid(row=0, column=0, padx=10, pady=1)
-nom_input_label = tk.Entry(nouveau_combattant)
+nom_input_label = tk.Entry(nouveau_combattant, width=30)
 nom_input_label.grid(row=1, column=0, padx=10, pady=1)
 
 type_input_label = tk.Label(nouveau_combattant, text="Type du combattant", bg="DarkOrange2", font="font")
 type_input_label.grid(row=2, column=0, padx=10, pady=1)
-type_input_label = tk.Entry(nouveau_combattant)
+type_input_label = tk.Entry(nouveau_combattant, width=30)
 type_input_label.grid(row=3, column=0, padx=10, pady=1)
 
 capacités_input_label = tk.Label(nouveau_combattant, text="Capacités du combattant", bg="DarkOrange2", font="font")
 capacités_input_label.grid(row=4, column=0, padx=10, pady=1)
-capacités_input_label = tk.Entry(nouveau_combattant)
+capacités_input_label = tk.Entry(nouveau_combattant, width=30)
 capacités_input_label.grid(row=5, column=0, padx=10, pady=1)
 
 
