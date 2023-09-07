@@ -1,3 +1,9 @@
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
 # Objectifs du Projet
 
 ## Objectif du projet
@@ -16,3 +22,16 @@
 ## Ajouter un nouveau Pokemon
 * L'application doit avoir une interface permettant à l'utilisateur d'ajouter un nouveau Pokemon à la liste.
 * L'utilisateur doit être en mesure d'entrer le nom du Pokemon, son type, ses capacités, etc.
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/ELYPSE18/Pokedex.svg?style=for-the-badge
+[contributors-url]: https://github.com/ELYPSE18/Pokedex/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/ELYPSE18/Pokedex.svg?style=for-the-badge
+[forks-url]: https://github.com/ELYPSE18/Pokedex/forks
+[stars-shield]: https://img.shields.io/github/stars/ELYPSE18/Pokedex.svg?style=for-the-badge
+[stars-url]: https://github.com/ELYPSE18/Pokedex/stargazers
+[issues-shield]: https://img.shields.io/github/issues/ELYPSE18/Pokedex.svg?style=for-the-badge
+[issues-url]: https://github.com/ELYPSE18/Pokedex/issues
+  
