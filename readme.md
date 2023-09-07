@@ -34,4 +34,6 @@
 [stars-url]: https://github.com/ELYPSE18/Pokedex/stargazers
 [issues-shield]: https://img.shields.io/github/issues/ELYPSE18/Pokedex.svg?style=for-the-badge
 [issues-url]: https://github.com/ELYPSE18/Pokedex/issues
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/laure-zammit-84a3b3150/
   
