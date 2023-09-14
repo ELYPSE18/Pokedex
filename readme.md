@@ -4,6 +4,17 @@
 [![Issues][issues-shield]][issues-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
+
+<div align="center">
+  <a href="https://ELYPSE18.github.io/Pokedex-Tkinter/">
+    <img src="https://1000logos.net/wp-content/uploads/2022/02/Dragon-Ball-Logo.png" alt="Aperçu ball" width="350">
+  </a>
+</div>
+
+<div align="center">
+   <h2>DEX</h2> 
+</div>
+
 # Objectifs du Projet
 
 ## Objectif du projet
