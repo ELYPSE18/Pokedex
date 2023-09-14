@@ -18,7 +18,7 @@
 # Objectifs du Projet
 
 ## Objectif du projet
-* Créer une application Pokedex en utilisant Python et Tkinter.
+* Créer une application Pokedex ("Dragonballdex") en utilisant Python et Tkinter.
 * Cette application doit être capable de lister des Pokemon, afficher des informations sur un Pokemon spécifique lorsque l'utilisateur le sélectionne, et permettre à l'utilisateur d'ajouter de nouveaux Pokemon à la liste.
 
 ## L'application doit comporter les fonctionnalités suivantes
